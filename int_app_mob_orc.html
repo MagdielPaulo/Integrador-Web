@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Integrador Dashboard</title>
+
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <div class="container-scroller">
+      <div class="row p-0 m-0 proBanner" id="proBanner">
+        <div class="col-md-12 p-0 m-0">
+          <div class="card-body">
+            <div class="d-flex align-items-center justify-content-between">
+              <a>                
+                <span class="me-5 text-white" style="font-size: larger;"> Gestão Orçamentária</span>
+              </a>
+              <button id="bannerClose" class="btn border-0 p-0">
+                <i class="mdi mdi-close text-white me-0" id="fechar"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- page-body-wrapper -->
+      <div class="content-wrapper">
+        <div class="main-panel" style="width: 100%">
+          <div class="content-wrapper" style="padding-left: 0; padding-right: 0; margin-left: 0; margin-right: 0; width: 100%;">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="tab-content tab-transparent-content">
+                  <div class="tab-pane fade show active" id="business-1" role="tabpanel" aria-labelledby="business-tab">
+                    <div class="row">
+                      <div class="col-xl-4 col-lg-6 col-sm-6 grid-margin stretch-card"> 
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Orçamento Agrícola</h5> 
+                            <h2 class="mb-4 text-dark font-weight-bold" id="orcamento-agricola-valor" style="cursor: pointer;"></h2>
+                            <div class="dashboard-progress orcamento-agricola-progress d-flex align-items-center justify-content-center item-parent">
+                              <i class="mdi mdi-cash-multiple icon-md absolute-center text-dark"></i>
+                              <p class="absolute-center mt-4 mb-0 text-black">50%</p>
+                            </div>
+                            <p class="mt-4 mb-0">Realizado</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="orcamento-agricola-realizado" style="cursor: pointer;"></h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Orçamento Garagem</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold" id="orcamento-garagem-valor" style="cursor: pointer;" ></h2>
+                            <div class="dashboard-progress orcamento-garagem-progress d-flex align-items-center justify-content-center item-parent">
+                              <i class="mdi mdi-chart-bar icon-md absolute-center text-dark"></i>
+                              <p class="absolute-center mt-4 mb-0 text-black">40%</p>
+                            </div>
+                            <p class="mt-4 mb-0">Realizado</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="ocamento-garagem-realizado" style="cursor: pointer;"></h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Orçamento Industria</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold" id="orcamento-industria-valor" style="cursor: pointer;"></h2>
+                            <div class="dashboard-progress orcamento-industria-progress d-flex align-items-center justify-content-center item-parent">
+                              <i class="mdi mdi-robot-industrial icon-md absolute-center text-dark"></i>
+                              <p class="absolute-center mt-4 mb-0 text-black">70%</p>
+                            </div>
+                            <p class="mt-4 mb-0">Realizado</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="orcamento-industria-realizado" style="cursor: pointer;"></h3>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-xl-3  col-lg-6 col-sm-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body text-center">
+                            <h5 class="mb-2 text-dark font-weight-normal">Pedidos dentro Prazo</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold" id="pedido-documento-dentro-prazo-quantidade" style="cursor: pointer;" onclick="geraUrl(this)"></h2>
+                            <div class="dashboard-progress pedido-dentro-prazo-progress d-flex align-items-center justify-content-center item-parent">
+                              <i class="mdi mdi-alarm-note icon-md absolute-center text-dark"></i></div>
+                            <p class="mt-4 mb-0" id="pedido-produtos-dentro-prazo-texto"></p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="pedido-produtos-dentro-prazo-percentual" style="cursor: pointer;" onclick="geraUrl(this)"></h3>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+                    <div class="row">
+                      <div class="col-12 grid-margin">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="row">
+                              <!-- <div class="col-lg-3 col-sm-4 grid-margin  grid-margin-lg-0">
+                                <div class="wrapper pb-5 border-bottom">
+                                  <div class="text-wrapper d-flex align-items-center justify-content-between mb-2">
+                                    <p class="mb-0 text-wrapper" style="color:#0062ff">PRODUTO FREQUENTE</p>
+                                    <span style="color:#0062ff" id="produto_frequente_preco"></span>
+                                  </div>
+                                  <h5 class="mb-0 text-dark font-weight-bold" id="produto_frequente_nome"></h5>                                  
+                                  <h4 class="mb-4 text-dark font-weight-bold" id="produto_frequente_quantidade"></h4>                                  
+                                  <canvas id="produto-frequente" style="width:100%;max-width:600px;cursor: pointer;" onclick="geraUrl(this)"></canvas>
+                                </div>
+                                <div class="wrapper pt-5">
+                                  <div class="text-wrapper d-flex align-items-center justify-content-between mb-2">
+                                    <p class="mb-0 text-wrapper" style="color:rgb(220, 20, 60);">MAIOR FORNECEDOR</p>
+                                    <span class="text-wrapper" style="color:rgb(220, 20, 60);" id="maior_fornecedor_perc"><i class="mdi mdi-arrow-up"></i></span>
+                                  </div>
+                                  <h5 class="mb-0 text-dark font-weight-bold" id="maior_fornecedor_nome"></h5>
+                                  <h4 class="mb-4 text-dark font-weight-bold" id="maior_fornecedor_quantidade"></h4>                                  
+                                  <canvas id="maior-fornecedor" style="cursor: pointer" onclick="geraUrl(this)"></canvas>
+                                </div>
+                              </div> -->
+                              <div class="col-lg-9 col-sm-8 grid-margin grid-margin-lg-0">                                                         
+                                <div class="ps-0 ps-lg-4">
+                                  <div class="d-xl-flex justify-content-between align-items-center mb-2">
+                                    <div class="d-lg-flex align-items-center mb-lg-2 mb-xl-0">
+                                      <h3 class="card-title text-dark font-weight-bold me-2 mb-0">Orçado x Realizado</h3></div>
+                                    </div>
+                                  </div>
+                                  <div class="graph-custom-legend clearfix" id="fornecedor-pedidos-legenda"></div>
+                                  <canvas id="fornecedor-pedidos"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                      <div class="col-4 stretch-card d-xl-flex justify-content-between mb-5">
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="d-xl-flex justify-content-between mb-2">
+                              <h4 class="text-dark card-title">Realizado Mensal - Agrícola</h4>
+                            </div>
+                            <canvas id="previsao-entrega" style="cursor: pointer"></canvas>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="d-xl-flex justify-content-between mb-2">
+                              <h4 class="text-dark card-title">Realizado Mensal - Garagem</h4>
+                            </div>
+                            <canvas id="previsao-entrega2" style="cursor: pointer"></canvas>
+                          </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-body">
+                            <div class="d-xl-flex justify-content-between mb-2">
+                              <h4 class=" text-dark card-title">Realizado Mensal - Industria</h4>
+                            </div>
+                            <canvas id="previsao-entrega3" style="cursor: pointer"></canvas>
+                          </div>
+                         </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="assets/vendors/jquery-circle-progress/js/circle-progress.min.js"></script>
+    <script src="assets/vendors/integrador.js/int_compras_sol.js"></script>    
+    <script>
+       grafico01();
+       grafico03();
+       graficoRealizadoAgricola();
+       graficoRealizadoGaragem();
+       graficoRealizadoIndustria();
+
+    // grafico04();
+    // grafico05();
+    </script>
+</body>
+</html>
