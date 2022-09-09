@@ -12,5 +12,6 @@ Mini projeto pra apresentação de Dashboards sobre a gestão orçamentária par
 
 ## Ferramentas utilizadas:
 
-| HTML | CSS | Java Script| Flask | VScode |
+| HTML | CSS | Java Script | Python | Flask | VScode |
 | --- | --- | --- | --- | --- | --- |
+
