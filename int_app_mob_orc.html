@@ -16,7 +16,7 @@
           <div class="card-body">
             <div class="d-flex align-items-center justify-content-between">
               <a>                
-                <span class="me-5 text-white" style="font-size: larger;"> Gestão Orçamentária</span>
+                <span class="me-5 text-white" style="font-size: larger;"> Gestão Refeitório</span>
               </a>
               <button id="bannerClose" class="btn border-0 p-0">
                 <i class="mdi mdi-close text-white me-0" id="fechar"></i>
@@ -37,88 +37,53 @@
                       <div class="col-xl-4 col-lg-6 col-sm-6 grid-margin stretch-card"> 
                         <div class="card">
                           <div class="card-body text-center">
-                            <h5 class="mb-2 text-dark font-weight-normal">Orçamento Agrícola</h5> 
-                            <h2 class="mb-4 text-dark font-weight-bold" id="orcamento-agricola-valor" style="cursor: pointer;"></h2>
-                            <div class="dashboard-progress orcamento-agricola-progress d-flex align-items-center justify-content-center item-parent">
-                              <i class="mdi mdi-cash-multiple icon-md absolute-center text-dark"></i>
-                              <p class="absolute-center mt-4 mb-0 text-black">50%</p>
+                            <h5 class="mb-2 text-dark font-weight-normal">Café da Manhã</h5> 
+                            <h2 class="mb-4 text-dark font-weight-bold" id="cafe-manha-valor" style="cursor: pointer;"></h2>
+                            <div class="dashboard-progress cafe-manha-progress d-flex align-items-center justify-content-center item-parent">
+                              <i class="mdi mdi-food-variant icon-md absolute-center text-dark"></i>
                             </div>
-                            <p class="mt-4 mb-0">Realizado</p>
-                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="orcamento-agricola-realizado" style="cursor: pointer;"></h3>
+                            <p class="mt-4 mb-0">Quantidade de pessoas</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="cafe-manha-pessoas" style="cursor: pointer;"></h3>
                           </div>
                         </div>
                       </div>
                       <div class="col-xl-4 col-lg-6 col-sm-6 grid-margin stretch-card">
                         <div class="card">
                           <div class="card-body text-center">
-                            <h5 class="mb-2 text-dark font-weight-normal">Orçamento Garagem</h5>
-                            <h2 class="mb-4 text-dark font-weight-bold" id="orcamento-garagem-valor" style="cursor: pointer;" ></h2>
-                            <div class="dashboard-progress orcamento-garagem-progress d-flex align-items-center justify-content-center item-parent">
-                              <i class="mdi mdi-chart-bar icon-md absolute-center text-dark"></i>
-                              <p class="absolute-center mt-4 mb-0 text-black">40%</p>
+                            <h5 class="mb-2 text-dark font-weight-normal">Almoço</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold" id="almoco-valor" style="cursor: pointer;" ></h2>
+                            <div class="dashboard-progress almoco-progress d-flex align-items-center justify-content-center item-parent">
+                              <i class="mdi mdi-food icon-md absolute-center text-dark"></i>
                             </div>
-                            <p class="mt-4 mb-0">Realizado</p>
-                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="ocamento-garagem-realizado" style="cursor: pointer;"></h3>
+                            <p class="mt-4 mb-0">Quantidade de pessoas</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="almoco-pessoas" style="cursor: pointer;"></h3>
                           </div>
                         </div>
                       </div>
                       <div class="col-xl-4 col-lg-6 col-sm-6 grid-margin stretch-card">
                         <div class="card">
                           <div class="card-body text-center">
-                            <h5 class="mb-2 text-dark font-weight-normal">Orçamento Industria</h5>
-                            <h2 class="mb-4 text-dark font-weight-bold" id="orcamento-industria-valor" style="cursor: pointer;"></h2>
-                            <div class="dashboard-progress orcamento-industria-progress d-flex align-items-center justify-content-center item-parent">
-                              <i class="mdi mdi-robot-industrial icon-md absolute-center text-dark"></i>
-                              <p class="absolute-center mt-4 mb-0 text-black">70%</p>
+                            <h5 class="mb-2 text-dark font-weight-normal">Jantar</h5>
+                            <h2 class="mb-4 text-dark font-weight-bold" id="jantar-valor" style="cursor: pointer;"></h2>
+                            <div class="dashboard-progress jantar-progress d-flex align-items-center justify-content-center item-parent">
+                              <i class="mdi mdi-food-croissant icon-md absolute-center text-dark"></i>
                             </div>
-                            <p class="mt-4 mb-0">Realizado</p>
-                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="orcamento-industria-realizado" style="cursor: pointer;"></h3>
+                            <p class="mt-4 mb-0">Quantidade de pessoas</p>
+                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="jantar-pessoas" style="cursor: pointer;"></h3>
                           </div>
                         </div>
                       </div>
-                      <!-- <div class="col-xl-3  col-lg-6 col-sm-6 grid-margin stretch-card">
-                        <div class="card">
-                          <div class="card-body text-center">
-                            <h5 class="mb-2 text-dark font-weight-normal">Pedidos dentro Prazo</h5>
-                            <h2 class="mb-4 text-dark font-weight-bold" id="pedido-documento-dentro-prazo-quantidade" style="cursor: pointer;" onclick="geraUrl(this)"></h2>
-                            <div class="dashboard-progress pedido-dentro-prazo-progress d-flex align-items-center justify-content-center item-parent">
-                              <i class="mdi mdi-alarm-note icon-md absolute-center text-dark"></i></div>
-                            <p class="mt-4 mb-0" id="pedido-produtos-dentro-prazo-texto"></p>
-                            <h3 class="mb-0 font-weight-bold mt-2 text-dark" id="pedido-produtos-dentro-prazo-percentual" style="cursor: pointer;" onclick="geraUrl(this)"></h3>
-                          </div>
-                        </div>
-                      </div> -->
                     </div>
                     <div class="row">
                       <div class="col-12 grid-margin">
                         <div class="card">
                           <div class="card-body">
                             <div class="row">
-                              <!-- <div class="col-lg-3 col-sm-4 grid-margin  grid-margin-lg-0">
-                                <div class="wrapper pb-5 border-bottom">
-                                  <div class="text-wrapper d-flex align-items-center justify-content-between mb-2">
-                                    <p class="mb-0 text-wrapper" style="color:#0062ff">PRODUTO FREQUENTE</p>
-                                    <span style="color:#0062ff" id="produto_frequente_preco"></span>
-                                  </div>
-                                  <h5 class="mb-0 text-dark font-weight-bold" id="produto_frequente_nome"></h5>                                  
-                                  <h4 class="mb-4 text-dark font-weight-bold" id="produto_frequente_quantidade"></h4>                                  
-                                  <canvas id="produto-frequente" style="width:100%;max-width:600px;cursor: pointer;" onclick="geraUrl(this)"></canvas>
-                                </div>
-                                <div class="wrapper pt-5">
-                                  <div class="text-wrapper d-flex align-items-center justify-content-between mb-2">
-                                    <p class="mb-0 text-wrapper" style="color:rgb(220, 20, 60);">MAIOR FORNECEDOR</p>
-                                    <span class="text-wrapper" style="color:rgb(220, 20, 60);" id="maior_fornecedor_perc"><i class="mdi mdi-arrow-up"></i></span>
-                                  </div>
-                                  <h5 class="mb-0 text-dark font-weight-bold" id="maior_fornecedor_nome"></h5>
-                                  <h4 class="mb-4 text-dark font-weight-bold" id="maior_fornecedor_quantidade"></h4>                                  
-                                  <canvas id="maior-fornecedor" style="cursor: pointer" onclick="geraUrl(this)"></canvas>
-                                </div>
-                              </div> -->
                               <div class="col-lg-9 col-sm-8 grid-margin grid-margin-lg-0">                                                         
                                 <div class="ps-0 ps-lg-4">
                                   <div class="d-xl-flex justify-content-between align-items-center mb-2">
                                     <div class="d-lg-flex align-items-center mb-lg-2 mb-xl-0">
-                                      <h3 class="card-title text-dark font-weight-bold me-2 mb-0">Orçado x Realizado</h3></div>
+                                      <h3 class="card-title text-dark font-weight-bold me-2 mb-0">Desconto x Cortesia</h3></div>
                                     </div>
                                   </div>
                                   <div class="graph-custom-legend clearfix" id="fornecedor-pedidos-legenda"></div>
@@ -131,32 +96,42 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-12">
-                      <div class="col-4 stretch-card d-xl-flex justify-content-between mb-5">
+                      <div class="col-xl-4 col-lg-6 col-sm-6 grid-margin stretch-card"> 
                         <div class="card">
-                          <div class="card-body">
-                            <div class="d-xl-flex justify-content-between mb-2">
-                              <h4 class="text-dark card-title">Realizado Mensal - Agrícola</h4>
-                            </div>
-                            <canvas id="previsao-entrega" style="cursor: pointer"></canvas>
+                          <div class="card-body text-center">
+                            <div class="card-body">
+                              <div class="d-xl-flex justify-content-between mb-2">
+                                <h4 class="text-dark card-title">Realizado Mensal - Café da Manhã</h4>
+                              </div>
+                              <canvas id="previsao-entrega" style="cursor: pointer"></canvas>
+                              </div>
                           </div>
                         </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-6 col-sm-6 grid-margin stretch-card">
                         <div class="card">
-                          <div class="card-body">
-                            <div class="d-xl-flex justify-content-between mb-2">
-                              <h4 class="text-dark card-title">Realizado Mensal - Garagem</h4>
+                          <div class="card-body text-center">
+                            <div class="card-body">
+                              <div class="d-xl-flex justify-content-between mb-2">
+                                <h4 class="text-dark card-title">Realizado Mensal - Almoço</h4>
+                              </div>
+                              <canvas id="previsao-entrega2" style="cursor: pointer"></canvas>
+                              </div>
                             </div>
-                            <canvas id="previsao-entrega2" style="cursor: pointer"></canvas>
                           </div>
                         </div>
+                      </div>
+                      <div class="col-xl-4 col-lg-6 col-sm-6 grid-margin stretch-card">
                         <div class="card">
-                          <div class="card-body">
-                            <div class="d-xl-flex justify-content-between mb-2">
-                              <h4 class=" text-dark card-title">Realizado Mensal - Industria</h4>
+                          <div class="card-body text-center">
+                            <div class="card-body">
+                              <div class="d-xl-flex justify-content-between mb-2">
+                                <h4 class="text-dark card-title">Realizado Mensal - Almoço</h4>
+                              </div>
+                              <canvas id="previsao-entrega3" style="cursor: pointer"></canvas>
+                              </div>
                             </div>
-                            <canvas id="previsao-entrega3" style="cursor: pointer"></canvas>
                           </div>
-                         </div>
                         </div>
                       </div>
                     </div>
@@ -175,12 +150,10 @@
     <script>
        grafico01();
        grafico03();
-       graficoRealizadoAgricola();
-       graficoRealizadoGaragem();
-       graficoRealizadoIndustria();
+       graficoPessoasCafeDaManha();
+       graficoPessoasAlmoco();
+       graficoPessoasJantar();
 
-    // grafico04();
-    // grafico05();
     </script>
 </body>
 </html>

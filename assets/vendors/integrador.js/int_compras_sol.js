@@ -66,14 +66,14 @@ function grafico01() {
     var r_pedido_em_atraso_perc = 100;
     var r_pedido_dentro_prazo_perc = 100;
 
-    document.getElementById('orcamento-agricola-valor').innerText = 'R$ 1.000.000,00';//getValor(r_params, 0);
-    document.getElementById('orcamento-agricola-realizado').innerText = 'R$ 90.000,00';//getValor(r_params, 5);
+    document.getElementById('cafe-manha-valor').innerText = 'R$ 3,50';//getValor(r_params, 0);
+    document.getElementById('cafe-manha-pessoas').innerText = '20';//getValor(r_params, 5);
 
-    document.getElementById('orcamento-garagem-valor').innerText = 'R$ 54.000.000.00';//getValor(r_params, 1);
-    document.getElementById('ocamento-garagem-realizado').innerText = 'R$ 2.000.000,00';//getValor(r_params, 6);
+    document.getElementById('almoco-valor').innerText = 'R$ 4,50';//getValor(r_params, 1);
+    document.getElementById('almoco-pessoas').innerText = '45';//getValor(r_params, 6);
 
-    document.getElementById('orcamento-industria-valor').innerText = 'R$ 30.000,00';//getValor(r_params, 3);
-    document.getElementById('orcamento-industria-realizado').innerText = 'R$ 40.000.000,00';//getValor(r_params, 3);
+    document.getElementById('jantar-valor').innerText = 'R$ 4,50';//getValor(r_params, 3);
+    document.getElementById('jantar-pessoas').innerText = '50';//getValor(r_params, 3);
     
     // document.getElementById('pedido-produtos-em-atraso-percentual').innerText = r_pedido_em_atraso_perc.toFixed(2) + '%';
 
@@ -81,8 +81,8 @@ function grafico01() {
     // document.getElementById('pedido-produtos-dentro-prazo-texto').innerText = 'Total de Produtos ' + getValor(r_params, 8) + ' de ' + getValor(r_params, 7);
     // document.getElementById('pedido-produtos-dentro-prazo-percentual').innerText = r_pedido_dentro_prazo_perc.toFixed(2) + '%';
 
-    if ($(".orcamento-agricola-progress").length) {
-        $('.orcamento-agricola-progress').circleProgress({
+    if ($(".cafe-manha-progress").length) {
+        $('.cafe-manha-progress').circleProgress({
             value: 0.5,
             size: 125,
             thickness: 15,
@@ -93,8 +93,8 @@ function grafico01() {
         });
     }
 
-    if ($(".orcamento-garagem-progress").length) {
-        $('.orcamento-garagem-progress').circleProgress({
+    if ($(".almoco-progress").length) {
+        $('.almoco-progress').circleProgress({
             value: 0.4,
             size: 125,
             thickness: 15,
@@ -105,20 +105,8 @@ function grafico01() {
         });
     }
 
-    // // if ($(".pedido-em-atraso-progress").length) {
-    // //     $('.pedido-em-atraso-progress').circleProgress({
-    // //         value: 0.7,
-    // //         size: 125,
-    // //         thickness: 15,
-    // //         startAngle: 10,
-    // //         fill: {
-    // //             gradient: ["#f76b1c", "#fad961"]
-    // //         }
-    // //     });
-    // }
-
-    if ($(".orcamento-industria-progress").length) {
-        $('.orcamento-industria-progress').circleProgress({
+    if ($(".jantar-progress").length) {
+        $('.jantar-progress').circleProgress({
             value: 0.7,
             size: 125,
             thickness: 15,
@@ -130,16 +118,12 @@ function grafico01() {
     }
 };
 
-function graficoRealizadoAgricola() {
-    // var r_params = location.search;
-    // r_params = r_params.slice(1);
-    // r_params = r_params.split('&');
+function graficoPessoasCafeDaManha() {
+    
     
     var r_data = ['08/2022','09/2022','10/2022','11/2022','12/2022'];
     var r_value = [20, 40, 80, 75, 94];
 
-    // var r_value = r_params[16].slice(10);
-    // r_value = r_value.split(';');
 
     if (("previsao-entrega").length) {
         var previsaoEntregaData = {
@@ -323,16 +307,12 @@ function graficoRealizadoAgricola() {
     }
 };
 
-function graficoRealizadoGaragem() {
-    // var r_params = location.search;
-    // r_params = r_params.slice(1);
-    // r_params = r_params.split('&');
+function graficoPessoasAlmoco() {
+
     
     var r_data = ['08/2022','09/2022','10/2022','11/2022','12/2022'];
     var r_value = [20, 40, 85, 75, 94];
 
-    // var r_value = r_params[16].slice(10);
-    // r_value = r_value.split(';');
 
     if (("previsao-entrega2").length) {
         var previsaoEntregaData = {
@@ -516,16 +496,10 @@ function graficoRealizadoGaragem() {
     }
 };
 
-function graficoRealizadoIndustria() {
-    // var r_params = location.search;
-    // r_params = r_params.slice(1);
-    // r_params = r_params.split('&');
+function graficoPessoasJantar() {
     
     var r_data = ['08/2022','09/2022','10/2022','11/2022','12/2022'];
     var r_value = [20, 40, 80, 95, 200];
-
-    // var r_value = r_params[16].slice(10);
-    // r_value = r_value.split(';');
 
     if (("previsao-entrega2").length) {
         var previsaoEntregaData = {
@@ -561,7 +535,7 @@ function graficoRealizadoIndustria() {
                     },
                     ticks: {
                         beginAtZero: true,
-                        stepSize: 20,
+                        stepSize: 2,
                         display: true,
                         padding: 10,
                     }
@@ -710,35 +684,17 @@ function graficoRealizadoIndustria() {
 };
   
 function grafico03() {
-    // var r_params = location.search;
-    // r_params = r_params.slice(1);
-    // r_params = r_params.split('&');
 
-    var r_orcamento       = ['Agricola', 'Garagem', 'Industria'];
-    var r_valor_orcado    = [100000000, 54000000, 30000000];
-    var r_valor_realizado = [7400000, 20000000, 40000000];
-
-
-    // var r_prazo = r_params[13].slice(22);
-    // r_prazo = r_prazo.split(';');
-
-    // var r_atraso = r_params[14].slice(23);
-    // r_atraso = r_atraso.split(';');
-
-    // var r_maior_fornec = r_fornec[0];
-    // var r_maior_fornec_quant = parseInt(r_prazo[0]) + parseInt(r_atraso[0]);
-    // var r_maior_fornec_perc = (parseInt(r_atraso[0]) * 100) / r_maior_fornec_quant;
-
-    // document.getElementById('maior_fornecedor_nome').innerText = r_maior_fornec;
-    // document.getElementById('maior_fornecedor_quantidade').innerText = r_maior_fornec_quant;
-    // document.getElementById('maior_fornecedor_perc').innerText = r_maior_fornec_perc.toFixed(2) + '%';
+    var r_refeicoes           = ['Café da Manhã', 'Almoço', 'Jantar'];
+    var r_valor_descontado    = [50, 100, 150];
+    var r_valor_cortesia      = [20, 40, 60];
 
     if ($("#fornecedor-pedidos").length) {
         var fornecedorPedidosData = {
-            labels: r_orcamento,
+            labels: r_refeicoes,
             datasets: [{
-                label: 'Orçado',
-                data: r_valor_orcado,
+                label: 'Desconto',
+                data: r_valor_descontado,
                 backgroundColor: [
                     '#a461d8', '#a461d8', '#a461d8',
                 ],
@@ -749,8 +705,8 @@ function grafico03() {
                 fill: false
             },
             {
-                label: 'Realizado',
-                data: r_valor_realizado,
+                label: 'Cortesia',
+                data: r_valor_cortesia,
                 backgroundColor: [
                     '#fc5a5a', '#fc5a5a', '#fc5a5a',
                 ],
@@ -841,180 +797,3 @@ function grafico03() {
         document.getElementById('fornecedor-pedidos-legenda').innerHTML = barChart.generateLegend();
     }
 }; 
-
-
-
-
-
-// function grafico04() {
-//     var r_params = location.search;
-//     r_params = r_params.slice(1);
-//     r_params = r_params.split('&');
-
-//     var r_produto = r_params[17].slice(10);
-//     r_produto = r_produto.split(';');
-
-//     var r_produto_fornec = r_params[18].slice(15);
-//     r_produto_fornec = r_produto_fornec.split(';');
-
-//     var r_produto_quant = r_params[19].slice(21);
-//     r_produto_quant = r_produto_quant.split(';');
-
-//     var r_produto_frequente = r_produto[0];
-//     var r_produto_frequente_quantidade = r_produto[1];
-//     var r_produto_frequente_preco = r_produto[2] / 100;
-
-//     document.getElementById('produto_frequente_nome').innerText = r_produto_frequente;
-//     document.getElementById('produto_frequente_quantidade').innerText = r_produto_frequente_quantidade;
-//     document.getElementById('produto_frequente_preco').innerText = 'R$ ' + r_produto_frequente_preco.toFixed(2);
-
-//     if ($("#produto-frequente").length) {
-//         var produtoFrequenteData = {
-//             labels: r_produto_fornec,
-//             datasets: [{
-//                 label: 'Frequencia',
-//                 data: r_produto_quant,
-//                 backgroundColor: [
-//                     '#cfe1ff',
-//                 ],
-//                 borderColor: [
-//                     '#0062ff'
-//                 ],
-//                 borderWidth: 3,
-//                 fill: true,
-//             }],
-//         };
-//         var produtoFrequenteOptions = {
-//             scales: {
-//                 yAxes: [{
-//                     display: false,
-//                     gridLines: {
-//                         drawBorder: false,
-//                         display: false,
-//                         drawTicks: false
-//                     },
-//                     ticks: {
-//                         beginAtZero: true,
-//                         stepSize: 10
-//                     }
-//                 }],
-//                 xAxes: [{
-//                     display: false,
-//                     position: 'bottom',
-//                     gridLines: {
-//                         drawBorder: false,
-//                         display: false,
-//                         drawTicks: false
-//                     },
-//                     ticks: {
-//                         beginAtZero: true,
-//                         stepSize: 10
-//                     }
-//                 }],
-//             },
-//             legend: {
-//                 display: false,
-//             },
-//             elements: {
-//                 point: {
-//                     radius: 2
-//                 },
-//                 line: {
-//                     tension: 0
-//                 }
-//             },
-//             tooltips: {
-//                 backgroundColor: 'rgba(2, 171, 254, 1)',
-//             },
-//         };
-//         var barChartCanvas = $("#produto-frequente").get(0).getContext("2d");
-//         var barChart = new Chart(barChartCanvas, {
-//             type: 'line',
-//             data: produtoFrequenteData,
-//             options: produtoFrequenteOptions,
-//         });
-//     }
-// };
-
-// function grafico05() {
-//     var r_params = location.search;
-//     r_params = r_params.slice(1);
-//     r_params = r_params.split('&');
-
-//     var r_maior_fornec_mes = r_params[20].slice(17);
-//     r_maior_fornec_mes = r_maior_fornec_mes.split(';');
-
-//     var r_maior_fornec_freq = r_params[21].slice(18);
-//     r_maior_fornec_freq = r_maior_fornec_freq.split(';');
-
-//     var r_barcolors = [];
-
-//     for (var i = 0; i < r_maior_fornec_mes.length; i++) {
-//         r_barcolors[i] = "#DC143C";
-//     }
-
-//     if ($("#maior-fornecedor").length) {
-//         var maiorFornecedorData = {
-//             labels: r_maior_fornec_mes,
-//             datasets: [{
-//                 label: 'Produtos',
-//                 data: r_maior_fornec_freq,
-//                 backgroundColor: r_barcolors,
-//                 borderColor: [
-//                     // '#3dd597'
-//                 ],
-//                 borderWidth: 1,
-//                 fill: false,
-//             }],
-//         };
-//         var maiorFornecedorOptions = {
-//             scales: {
-//                 yAxes: [{
-//                     display: false,
-//                     gridLines: {
-//                         drawBorder: false,
-//                         display: false,
-//                         drawTicks: false
-//                     },
-//                     ticks: {
-//                         beginAtZero: true,
-//                         stepSize: 10
-//                     }
-//                 }],
-//                 xAxes: [{
-//                     display: true,
-//                     position: 'bottom',
-//                     gridLines: {
-//                         drawBorder: false,
-//                         display: false,
-//                         drawTicks: true
-//                     },
-//                     ticks: {
-//                         beginAtZero: true,
-//                         stepSize: 10
-//                     }
-//                 }],
-//             },
-//             legend: {
-//                 display: false,
-//             },
-//             elements: {
-//                 point: {
-//                     radius: 0
-//                 },
-//                 line: {
-//                     tension: 0
-//                 }
-//             },
-//             tooltips: {
-//                 backgroundColor: 'rgba(2, 171, 254, 1)',
-//             },
-//         };
-//         var barChartCanvas = $("#maior-fornecedor").get(0).getContext("2d");
-//         var barChart = new Chart(barChartCanvas, {
-//             type: 'bar',
-//             data: maiorFornecedorData,
-//             options: maiorFornecedorOptions,
-//         });
-//     }
-// };
